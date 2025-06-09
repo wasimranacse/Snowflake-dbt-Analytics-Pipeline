@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: raw_orders
+      - name: raw_products
+
+models:
+  - name: stg_orders
+    description: "Cleaned and typed orders data"
+    columns:
+      - name: order_date
+        description: "Date of the order"
+      - name: order_id
+        description: "Unique ID for the order"
+      - name: net_sales
+        description: "Net sales amount"
+
+models:
+  - name: stg_products
+    description: "Cleaned and typed products data"
+    columns:
+      - name: product_title
+        description: "Cleaned name of the product"
+      - name: category_name
+        description: "Shows the product category"
+      - name: net_revenue
+        description: "Net revenue amount"
